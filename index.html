@@ -9,9 +9,18 @@
 </head>
 <body>
     <button class="btnAdd">Add New Book</button>
-    <dialog class="dialog">
-        <form action="">
-            <input type="text">Title
+    <dialog class="modal">
+        <form action="" class="form">
+            <label for="title">Title
+                <input type="text" name="titl" id="title" required>
+            </label>
+            <label for="number">Pages
+                <input type="number" name="numb" id="number" required>
+            </label>
+            <label for="checkbox">Read
+                <input type="checkbox" name="chec" id="checkbox" unchecked>
+            </label>
+            <button type="submit" class="submitbtn">Add Book</button>
         </form>
     </dialog>
     <div class="card-container"></div>
