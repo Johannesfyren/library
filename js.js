@@ -85,7 +85,6 @@ buttonAddCard.addEventListener("click", ()=>{
   modal.showModal();
 });
 submit.addEventListener("click", (e)=>{
-  
   console.log(readValue.checked);
   addBookToLibrary(titleValue.value, pageValue.value, readValue.checked);
   // console.log(myLibrary);
@@ -95,8 +94,15 @@ submit.addEventListener("click", (e)=>{
   form.reset();
 });
 
-removebtn.addEventListener("click", ()=>{
-  console.log("hello");
+
+
+addEventListener("click", (e)=>{
+  
+  let target = e.target.parentElement;
+  if (target.className == "card" && e.target.nodeName == 'BUTTON'){
+    target.remove();
+  }
+  
 });
 
 
